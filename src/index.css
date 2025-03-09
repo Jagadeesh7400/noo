@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 202 100% 98%;
+  --foreground: 222 84% 5%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 84% 5%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 84% 5%;
+
+  --primary: 201 100% 36%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 196 100% 42%;
+  --secondary-foreground: 222 84% 5%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 195 100% 75%;
+  --accent-foreground: 222 84% 5%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 201 100% 36%;
+
+  --radius: 0.5rem;
+
+  /* Custom color palette */
+  --primary-dark: #03045e;
+  --primary-medium: #023e8a;
+  --primary-default: #0077b6;
+  --primary-light: #0096c7;
+  --secondary-default: #00b4d8;
+  --secondary-light: #48cae4;
+  --accent-default: #90e0ef;
+  --accent-light: #ade8f4;
+  --accent-lighter: #caf0f8;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-accent-lighter text-foreground;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-medium;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-secondary-light;
+}
+
+.btn-outline {
+  @apply border border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.badge {
+  @apply px-2 py-1 text-xs font-medium rounded-full;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-danger {
+  @apply bg-red-100 text-red-800;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-800;
+}
+
+/* Custom UI components based on the Dribbble design */
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-br from-primary-dark via-primary to-secondary;
+}
+
+.nav-item {
+  @apply flex items-center p-3 rounded-lg transition-colors;
+}
+
+.nav-item-active {
+  @apply bg-primary text-white;
+}
+
+.nav-item-inactive {
+  @apply text-gray-300 hover:bg-primary-medium hover:text-white;
+}
+
